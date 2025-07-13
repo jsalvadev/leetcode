@@ -1,3 +1,4 @@
+// oxlint-disable-next-line no-unused-vars
 interface Array<T> {
   last(): T | -1
 }
