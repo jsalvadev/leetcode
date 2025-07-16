@@ -1,5 +1,5 @@
 function plusOne(digits: number[]): number[] {
-  let d = (BigInt(digits.join('')) + 1n).toString().split('')
+  const d = (BigInt(digits.join('')) + 1n).toString().split('')
 
   const result = d.map(Number)
   return result

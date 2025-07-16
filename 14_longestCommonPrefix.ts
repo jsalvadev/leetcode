@@ -2,14 +2,15 @@ function longestCommonPrefix(strs: string[]): string {
   if (strs.length === 0) return ''
   if (strs.length === 1) return strs[0]
 
-  let first = strs[0]
+  const first = strs[0]
   let output = ''
 
   for (let i = 0; i < first.length; i++) {
     const allMatch = strs.every(item => first[i] === item[i])
     if (allMatch) {
       output += first[i]
-    } else {
+    }
+    else {
       return output
     }
   }

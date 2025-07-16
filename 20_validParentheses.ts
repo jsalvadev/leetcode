@@ -6,13 +6,15 @@ function isValid(s: string): boolean {
   map.set(']', '[')
   map.set('}', '{')
 
-  let stack = [s[0]]
+  const stack = [s[0]]
   for (let i = 1; i < s.length; i++) {
     if (s[i] === '(' || s[i] === '[' || s[i] === '{') {
       stack.push(s[i])
-    } else if (stack[stack.length - 1] === map.get(s[i])) {
+    }
+    else if (stack[stack.length - 1] === map.get(s[i])) {
       stack.pop()
-    } else {
+    }
+    else {
       return false
     }
   }

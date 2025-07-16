@@ -7,7 +7,8 @@ function removeDuplicates(nums: number[]): number {
     if (nums[i] === max) {
       nums[i] = 101
       unique--
-    } else {
+    }
+    else {
       max = nums[i]
     }
   }

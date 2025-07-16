@@ -2,7 +2,7 @@ function isPalindrome(x: number): boolean | undefined {
   if (x < 0) return false
   if (0 <= x && x <= 9) return true
 
-  let digits = []
+  const digits = []
   while (x > 0) {
     const digit = x % 10
     digits.unshift(digit)

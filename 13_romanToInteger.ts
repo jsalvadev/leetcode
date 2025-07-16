@@ -15,7 +15,8 @@ function romanToInt(s: string): number {
 
     if (roman.get(s[curr]) >= roman.get(s[prev])) {
       num += roman.get(s[curr])
-    } else {
+    }
+    else {
       num -= roman.get(s[curr])
     }
   }
@@ -36,7 +37,7 @@ function romanToInt(s: string): number {
 // Explanation: (L = 50),
 
 // console.log(romanToInt('LVIII'))
-console.log(romanToInt('MCMXCIV')) //1994
+console.log(romanToInt('MCMXCIV')) // 1994
 
 //  M   C   M   X   C   I   V
 // [0] [1] [2] [3] [4] [5] [6]

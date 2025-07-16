@@ -2,10 +2,11 @@ function climbStairs(n: number): number {
   const memo = new Map<number, number>()
 
   function helper(k: number): number {
-    // case base
+    // base case
     if (k <= 3) return k
 
-    if (memo.has(k)) return memo.get(k)!
+    const cached = memo.get(k)
+    if (cached !== undefined) return cached
 
     const res = helper(k - 1) + helper(k - 2)
     memo.set(k, res)
